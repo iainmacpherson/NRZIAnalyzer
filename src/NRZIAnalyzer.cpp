@@ -8,6 +8,7 @@ NRZIAnalyzer::NRZIAnalyzer()
   mSimulationInitilized( false )
 {
   SetAnalyzerSettings( mSettings.get() );
+  UseFrameV2();
 }
 
 NRZIAnalyzer::~NRZIAnalyzer()
@@ -73,6 +74,12 @@ void NRZIAnalyzer::WorkerThread()
     frame.mEndingSampleInclusive = mDataSerial->GetSampleNumber();
 
     mResults->AddFrame( frame );
+
+    FrameV2 frame_v2;
+    frame_v2.AddByte( "data", data);
+    mResults->AddFrameV2( frame_v2, "byte", frame.mStartingSampleInclusive, frame.mEndingSampleInclusive);
+
+
     mResults->CommitResults();
     ReportProgress( frame.mEndingSampleInclusive );
   }
