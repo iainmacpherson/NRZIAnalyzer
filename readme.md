@@ -1,6 +1,6 @@
 # NRZI Analyzer
 
-This is a fork of the example low level analyzer from Saleae and this plugin is designed to be used with their Logic 2 software. It provides extremely bare bones decoding of NRZI data, sampled with DDR according to a paired clock signal.
+This is a fork of the example low level analyzer from Saleae and implements a plugin for their Logic 2 software. It provides extremely bare bones decoding of NRZI data, sampled with DDR according to a paired clock signal.
 
 Parameters:
 * Clock Channel - The channel on which the clock signal is connected.
