@@ -7,5 +7,5 @@ Parameters:
 * Data Channel - The channel on which the data signal is connected.
 * DDR Frequency - Double whatever the frequency of the clock is.
 
-The README from the parent repository is [build_instructions](build_instructions.md) and includes all the infomation needed to build and use this extension.
+The README from the parent repository is [build_instructions](docs/build_instructions.md) and includes all the infomation needed to build and use this extension.
 
